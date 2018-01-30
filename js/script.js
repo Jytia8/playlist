@@ -17,22 +17,22 @@
 
 // Songs
 var mySong = {
-	"title":"24K Magic",
-	"artist":"Bruno Mars",
-	"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-	"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+	"title":"Finesse (Remix)",
+	"artist":"Bruno Mars ft. Cardi B",
+	"mp3-url":"https://www.youtube.com/watch?v=LsoLEjrDogU",
+	"image-url":"https://pbs.twimg.com/media/DSphA7KWAAETM4C.jpg:large",
 }
 
 var myPlayList = [
 	{
-		"title":"24K Magic",
-		"artist":"Bruno Mars",
-		"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-		"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+		"title":"Finesse (Remix)",
+		"artist":"Bruno Mars ft. Cardi B",
+		"mp3-url":"https://www.youtube.com/watch?v=LsoLEjrDogU",
+		"image-url":"https://pbs.twimg.com/media/DSphA7KWAAETM4C.jpg:large",
 	},
 	{
-		"title":"Sir Duke",
-		"artist":"Stevie Wonder",
+		"title":"Motorsport",
+		"artist":"Nicki Minaji, Cardi B, Migos",
 		"mp3-url":"https://open.spotify.com/track/2udw7RDkldLFIPG9WYdVtT",
 		"image-url":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Songs_in_the_key_of_life.jpg/220px-Songs_in_the_key_of_life.jpg",
 	},
@@ -57,8 +57,11 @@ $( document ).ready(function() {
 
 function displayList(){
 
+$('body').append("<p>Title: " + mySong.title + "</p>");
+$('body').append("<p>Artist: " + mySong.artist + "</p>");
+$('body').append("<a href= " + mySong["mp3-url"] + ">");
+$('body').append("<img src= " + mySong["image-url"] + ">");
 
-  
 }
 
 function clearList(){
