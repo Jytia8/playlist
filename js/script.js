@@ -33,8 +33,8 @@ var myPlayList = [
 	{
 		"title":"Motorsport",
 		"artist":"Nicki Minaji, Cardi B, Migos",
-		"mp3-url":"https://open.spotify.com/track/2udw7RDkldLFIPG9WYdVtT",
-		"image-url":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Songs_in_the_key_of_life.jpg/220px-Songs_in_the_key_of_life.jpg",
+		"mp3-url":"https://www.youtube.com/watch?v=9v_rtaye2yY",
+		"image-url":"https://i.ytimg.com/vi/TbfxmTQkLAE/maxresdefault.jpg",
 	},
 	{
 		"title":"Sorry",
@@ -50,7 +50,7 @@ var myPlayList = [
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
   
-
+displayList();
 
 
 });
@@ -59,10 +59,18 @@ function displayList(){
 
 $('body').append("<p>Title: " + mySong.title + "</p>");
 $('body').append("<p>Artist: " + mySong.artist + "</p>");
-$('body').append("<a href= " + mySong["mp3-url"] + ">");
+$('body').append("<a href= " + mySong["mp3-url"] + ">hi</a>");
 $('body').append("<img src= " + mySong["image-url"] + ">");
 
-}
+for (var i=0; i < songs.length; i = i + 1) {
+	  	$(".song").append("<p>" + myPlayList[i.length] + "</p>");
+	}
+
+	
+//var myPlayLists = myPlayList[0].title;
+//var artist = myPlayList[1].artist;
+//$("#play").append("<p> Title "  + myPlayLists + "by " + artist);
+
 
 function clearList(){
   
