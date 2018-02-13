@@ -59,11 +59,11 @@ function displayList(){
 
 $('body').append("<p>Title: " + mySong.title + "</p>");
 $('body').append("<p>Artist: " + mySong.artist + "</p>");
-$('body').append("<a href= " + mySong["mp3-url"] + ">hi</a>");
+$('body').append("<a href= " + mySong["mp3-url"] + ">Listen Here</a>");
 $('body').append("<img src= " + mySong["image-url"] + ">");
 
-for (var i=0; i < songs.length; i = i + 1) {
-	  	$(".song").append("<p>" + myPlayList[i.length] + "</p>");
+for (var i=0; i < mySong.length; i = i + 1) {
+	  	$(".mySong").append("<p>" + myPlayList[i] + "</p>");
 	}
 
 	
@@ -82,4 +82,5 @@ function addSong(){
  
   
   
+}
 }
