@@ -37,44 +37,93 @@ var myPlayList = [
 		"image-url":"https://i.ytimg.com/vi/TbfxmTQkLAE/maxresdefault.jpg",
 	},
 	{
-		"title":"Sorry",
-		"artist":"Justin Bieber",
-		"mp3-url":"https://open.spotify.com/track/09CtPGIpYB4BrO8qb1RGsF",
-		"image-url":"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
-	}
-
+		"title":"Bartier Cardi",
+		"artist":"Cardi B ft. 21 Savage",
+		"mp3-url":"https://www.youtube.com/watch?v=sXP6vliZIHI",
+		"image-url":"https://images.complex.com/complex/images/c_crop,h_1200,w_1172,x_4,y_0/c_limit,w_680/fl_lossy,pg_1,q_auto/wcnqxs8k8ipbjfbn0dlj/bartier-cardi-album-cover",
+	},
+		{
+		"title":"Too Good At Goodbyes",
+		"artist":"Sam Smith",
+		"mp3-url":"https://www.youtube.com/watch?v=J_ub7Etch2U",
+		"image-url":"http://www.kiss925.com/wp-content/uploads/sites/59/2017/09/Sam-Smith-Too-Good-at-Goodbyes-Video.jpg",
+	},	{
+		"title":"Feelings",
+		"artist":"PnB Rock",
+		"mp3-url":"https://www.youtube.com/watch?v=uzANdtLhDUI",
+		"image-url":"https://i.ytimg.com/vi/uzANdtLhDUI/maxresdefault.jpg",
+	},	{
+		"title":"When we",
+		"artist":"Tank",
+		"mp3-url":"https://www.youtube.com/watch?v=QRF9TgkBCjc",
+		"image-url":"https://i.ytimg.com/vi/QRF9TgkBCjc/hqdefault.jpg",
+	},
+		{
+		"title":"No limit Remix",
+		"artist":"G-Easy ft. A$AP Rocky, Cardi B, French Montana, Juicy J, Belly",
+		"mp3-url":"https://www.youtube.com/watch?v=l_lblj8Cq0o",
+		"image-url":"https://i.ytimg.com/vi/PGfSaVDymjk/maxresdefault.jpg",
+	},	
+	{
+		"title":"Privacy",
+		"artist":"Chris Brown",
+		"mp3-url":"https://www.youtube.com/watch?v=Fq0xEpRDL9Q",
+		"image-url":"https://i.ytimg.com/vi/Fq0xEpRDL9Q/maxresdefault.jpg",
+	},
 ]
 
 
 
-// DOCUMENT READY FUNCTION
+//DOCUMENT READY FUNCTION
 $( document ).ready(function() {
+	console.log("page load");
+
+	displayList();
+	
+  $("button").click(function(){
+  	
+  	
+  	//for (var i=0; i < displayList.length; i= i + i){
+  	//	console.log(displayList[i]);
+  	//}
+  	
+  });
   
-displayList();
-
-
 });
 
 function displayList(){
+	
+	for (var i=0; i < myPlayList.length; i++){
+		var song = myPlayList[i];
+	  	//(".songs").append("<p>" + song.title + "</p>");
+	  	
+	  	$(".songs").append(
+	  		"<p>" + 
+	  			"<div> Title: " + song.title + "</div>" +
+	  			"<div> Artist:" + song.artist + "</div>" +
+	  			"<div><img src=" + song["image-url"] + "></div>" +
+	  			'<div><a href="' + song["mp3-url"] + '">Listen Here</a></div>' +
+	  		"</p>"
+	  	);
+	  	
+ 
+//$('body').append("<p>Title: " + myPlayList[i].title + "</p>");
+//$('body').append("<p>Artist: " + myPlayList[i].artist + "</p>");
+//$('body').append("<a href= " + myPlayList["mp3-url"][i] + ">Listen Here</a>");
+//$('body').append("<img src= " + myPlayList["image-url"][i] + ">");
 
-$('body').append("<p>Title: " + mySong.title + "</p>");
-$('body').append("<p>Artist: " + mySong.artist + "</p>");
-$('body').append("<a href= " + mySong["mp3-url"] + ">Listen Here</a>");
-$('body').append("<img src= " + mySong["image-url"] + ">");
+   }
 
-for (var i=0; i < mySong.length; i = i + 1) {
-	  	$(".mySong").append("<p>" + myPlayList[i] + "</p>");
-	}
+}
+
 
 	
-//var myPlayLists = myPlayList[0].title;
-//var artist = myPlayList[1].artist;
-//$("#play").append("<p> Title "  + myPlayLists + "by " + artist);
+
 
 
 function clearList(){
   
-  
+  $(".songs").empty();
   
 }
 
@@ -82,5 +131,4 @@ function addSong(){
  
   
   
-}
 }
